@@ -2,7 +2,7 @@
 
 a small business helper bot
 
-Rasputin is a Node.js API on top of a RethindDB instance. He is deployed using Docker Compose, and can even run on a Raspberry Pi. 
+Rasputin is a Node.js API on top of a RethinkDB instance. He is deployed using Docker Compose, and can even run on a Raspberry Pi. 
 
 Rasputin is a means to accomplish four things: 
 

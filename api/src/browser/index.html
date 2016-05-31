@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="rasputin">
+<head lang="en">
+    <base href="/">
+    <!-- SEO Meta Tags -->
+    <title ng-bind="meta.title"></title>
+    <meta name="description" content="{{meta.description}}">
+    <meta name="keywords" content="{{meta.keywords}}">
+    <meta name="robots" content="{{meta.robots}}">
+    <meta name="revisit-after" content="{{meta.revisitAfter}}">
+
+    <meta property="og:url" content="{{meta.ogUrl}}" />
+    <meta property="og:type" content="{{meta.ogType}}" />
+    <meta property="og:title" content="{{meta.ogTitle}}" />
+    <meta property="og:description" content="{{meta.ogDescription}}" />
+    <meta property="og:image" content="{{meta.ogImage}}" />
+    <!-- End SEO Meta Tags -->
+
+    <!-- Favicon Tags-->
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-57x57" href="57x57.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-60x60" href="60x60.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-72x72" href="72x72.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-76x76" href="76x76.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-114x114" href="114x114.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-120x120" href="120x120.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-144x144" href="144x144.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-152x152" href="152x152.png">
+    <link rel="apple-touch-icon" sizes="/favicon/favicon-180x180" href="180x180.png">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+
+    <meta name="viewport" content="width = device-width">
+
+    <!-- Font Awesome CDN Include -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- styles -->
+    <link rel="stylesheet" href="vendor.css"/>
+    <link rel="stylesheet" href="rasputin.css"/>
+    
+</head>
+
+<body>
+
+    <div id="wrapper" class="container">
+        <div id="main" class="index-main">
+            <section class="section-main" ui-view></section>
+            <form id="bank-login" method="POST" action="/api/bank/authenticate"></form>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="vendor.js"></script>
+    <script src="rasputin.js"></script>
+    <script src="templates.js"></script>
+    <script
+      src="https://cdn.plaid.com/link/stable/link-initialize.js"
+      data-client-name="Merciba"
+      data-form-id="bank-login"
+      data-key="ba74f8854d8a0da139189b8acf98b4"
+      data-product="connect"
+      data-env="tartan">
+    </script>
+</body>
+</html>

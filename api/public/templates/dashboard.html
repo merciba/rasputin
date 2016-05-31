@@ -1,0 +1,36 @@
+<h1>Dashboard</h1>
+<p>You're home!</p>
+<div class="container col-md-4">
+	<h3>Clients</h3>
+	<ul id="clients" style="list-style-type: none;">
+		<li ng-repeat="client in vm.clients">
+			<h4>{{client.organization}}</h4>
+			<p>{{client.first_name}} {{client.last_name}}</p>
+		</li>
+	</ul>
+</div>
+
+<div class="container col-md-4">
+	<h3>Invoices</h3>
+	<ul id="invoices" style="list-style-type: none;">
+		<li ng-repeat="invoice in vm.invoices">
+			<h4>{{invoice.organization}}</h4>
+			<p style="color: green;">${{invoice.amount}} {{invoice.currency_code}}</p>
+		</li>
+	</ul>
+</div>
+
+<div class="container col-md-4">
+	<h3>Transactions</h3>
+	<ul id="transactions" style="list-style-type: none;" ng-if="vm.transactions.length">
+		<li ng-repeat="transaction in vm.transactions">
+			<h4 style="color: red;">${{transaction.amount}}</h4>
+			<h5>{{transaction.name}}</h5>
+			<p>{{transaction.date}}</p>
+			<p>{{vm.getAccountName(transaction._account)}}</p>
+		</li>
+	</ul>
+	<div ng-if="!vm.transactions.length">
+		<p>Bank is not connected.</p>
+	</div>
+</div>

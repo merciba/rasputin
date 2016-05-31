@@ -1,0 +1,5 @@
+node_modules
+docker-compose.yml
+api/node_modules
+api/bower_components
+api/.env

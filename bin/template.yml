@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  db:
+    build: ./db
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "28015:28015"
+      - "29015:29015"
+    networks:
+      - rasputin
+  api:
+    build: ./api
+    ports:
+      - "80:8000"
+    environment:
+      DB_HOST: "<host>"
+      DB_PORT: 28015
+      DB_NAME: "<name>"
+      JWT_SECRET: "<randomstring>"
+      JWT_ISSUER: "http://<host>"
+      NODE_ENV: "production"
+      PLAID_CLIENT_ID: "<plaidClientId>"
+      PLAID_SECRET: "<plaidSecret>"
+      FRESHBOOKS_API_URL: "<freshbooksApiUrl>"
+      FRESHBOOKS_API_TOKEN: "<freshbooksApiToken"
+    networks:
+      - rasputin
+
+networks:
+  rasputin:
+    driver: bridge

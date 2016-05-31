@@ -1,0 +1,9 @@
+<form class="login-form" name="loginForm">
+	<input type="email" name="email" ng-model="vm.loginForm.email" placeholder="Email"/>
+	<div ng-show="loginForm.$submitted || loginForm.email.$touched">
+      <span ng-show="loginForm.email.$error.required">Tell us your email.</span>
+      <span ng-show="loginForm.email.$error.email">This is not a valid email.</span>
+    </div>
+	<input type="password" name="password" ng-model="vm.loginForm.password" placeholder="Password" />
+	<input type="submit" ng-click="vm.login()" value="Login" />
+</form>

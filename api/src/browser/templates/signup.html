@@ -1,0 +1,10 @@
+<form name="signupForm" novalidate>
+	<input type="email" name="email" ng-model="vm.signupForm.email" placeholder="Email"/>
+	<div ng-show="signupForm.$submitted || signupForm.email.$touched">
+      <span ng-show="signupForm.email.$error.required">Tell us your email.</span>
+      <span ng-show="signupForm.email.$error.email">This is not a valid email.</span>
+    </div>
+	<input type="password" name="password" ng-model="vm.signupForm.password" placeholder="Password" />
+	<input type="password" name="confirmPassword" ng-model="vm.signupForm.confirmPassword" placeholder="Confirm Password" />
+	<input type="submit" ng-click="vm.signup()" value="Signup" />
+</form>

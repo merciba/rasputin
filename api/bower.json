@@ -1,0 +1,49 @@
+{
+  "name": "rasputin-api",
+  "description": "an uncomplicated REST backend",
+  "main": "src/index.js",
+  "authors": [
+    "Alfonso Gober <alfonso@merciba.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "rasputin",
+    "backend",
+    "rest",
+    "api",
+    "db",
+    "toolkit",
+    "framework",
+    "spa",
+    "single",
+    "page",
+    "node",
+    "rethinkdb",
+    "nosql",
+    "express"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^1.2.5",
+    "angular-local-storage": "^0.2.7",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+    "lodash": "^4.13.1",
+    "angular": "^1.5.3",
+    "oboe": "^2.1.2",
+    "angular-oboe": "*",
+    "angular-messages": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "toastr": "^2.1.2"
+  }
+}

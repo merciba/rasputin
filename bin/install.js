@@ -31,14 +31,6 @@ module.exports = function (rasputin) {
 							message: 'Must be a valid hostname',
 							default: '',
 							required: true
-						},
-						name: {
-							description: 'Name of your app',
-							type: 'string',
-							pattern: /^[A-Z]+$/i,
-							message: 'Name must contain only the characters A-Z|a-z',
-							default: '',
-							required: true
 						}
 					}
 				}, function (err, config) {

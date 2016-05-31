@@ -16,7 +16,7 @@ services:
     environment:
       DB_HOST: "<host>"
       DB_PORT: 28015
-      DB_NAME: "<name>"
+      DB_NAME: "rasputin"
       JWT_SECRET: "<randomstring>"
       JWT_ISSUER: "http://<host>"
       NODE_ENV: "production"
